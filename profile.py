@@ -91,7 +91,7 @@ enb1 = request.RawPC("enb2")
 enb1.hardware_type = GLOBALS.HWTYPE
 enb1.disk_image = GLOBALS.SRSLTE_IMG
 iface2 = enb1.addInterface("eth1")
-iface2.addAddress(rspec.IPv4Address("10.10.1.4", "255.255.255.0"))
+iface2.addAddress(rspec.IPv4Address("10.10.1.5", "255.255.255.0"))
 
 # Add UE node
 rue1 = request.RawPC("rue1")
