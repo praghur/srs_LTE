@@ -80,18 +80,18 @@ epc.hardware_type = GLOBALS.HWTYPE
 epc.disk_image = GLOBALS.SRSLTE_IMG
 iface1 = epc.addInterface("eth1")
 iface1.addAddress(rspec.IPv4Address("10.10.1.1", "255.255.255.0"))
-# Add eNB node
+# Add eNB1 node
 enb1 = request.RawPC("enb1")
 enb1.hardware_type = GLOBALS.HWTYPE
 enb1.disk_image = GLOBALS.SRSLTE_IMG
 iface2 = enb1.addInterface("eth1")
 iface2.addAddress(rspec.IPv4Address("10.10.1.2", "255.255.255.0"))
-
-enb1 = request.RawPC("enb2")
-enb1.hardware_type = GLOBALS.HWTYPE
-enb1.disk_image = GLOBALS.SRSLTE_IMG
-iface2 = enb1.addInterface("eth1")
-iface2.addAddress(rspec.IPv4Address("10.10.1.5", "255.255.255.0"))
+# Add eNB2 node
+enb2 = request.RawPC("enb2")
+enb2.hardware_type = GLOBALS.HWTYPE
+enb2.disk_image = GLOBALS.SRSLTE_IMG
+iface4 = enb2.addInterface("eth1")
+iface4.addAddress(rspec.IPv4Address("10.10.1.5", "255.255.255.0"))
 
 # Add UE node
 rue1 = request.RawPC("rue1")
@@ -104,6 +104,7 @@ link = request.LAN("lan")
 link.addInterface(iface1)
 link.addInterface(iface2)
 link.addInterface(iface3)
+link.addInterface(iface4)
 link.link_multiplexing = True
 link.vlan_tagging = True
 link.best_effort = True
