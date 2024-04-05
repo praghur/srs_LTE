@@ -116,6 +116,13 @@ enbr.disk_image = GLOBALS.SRSLTE_IMG
 iface6 = enbr.addInterface("eth2")
 iface6.addAddress(rspec.IPv4Address("172.168.1.2", "255.255.255.0"))
 
+# Add LL UEr node
+rue3 = request.RawPC("rue3")
+rue3.hardware_type = GLOBALS.HWTYPE
+rue3.disk_image = GLOBALS.SRSLTE_IMG
+iface7 = rue3.addInterface("eth2")
+iface7.addAddress(rspec.IPv4Address("172.168.1.3", "255.255.255.0"))
+
 link = request.LAN("lan")
 link.addInterface(iface1)
 link.addInterface(iface2)
@@ -123,6 +130,7 @@ link.addInterface(iface3)
 link.addInterface(iface4)
 link.addInterface(iface5)
 link.addInterface(iface6)
+link.addInterface(iface7)
 link.link_multiplexing = True
 link.vlan_tagging = True
 link.best_effort = True
