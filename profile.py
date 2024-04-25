@@ -83,7 +83,7 @@ iface1a = epc.addInterface("eth2")
 iface1b = epc.addInterface("eth3")
 iface1.addAddress(rspec.IPv4Address("10.10.1.1", "255.255.255.0"))
 iface1a.addAddress(rspec.IPv4Address("172.168.1.1", "255.255.255.0"))
-iface1b.addAddress(rspec.IPv4Address("172.168.2.1", "255.255.255.0"))
+iface1b.addAddress(rspec.IPv4Address("172.168.1.100", "255.255.255.0"))
 
 
 # Add eNB1 node
