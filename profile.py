@@ -79,11 +79,10 @@ epc = request.RawPC("epc")
 epc.hardware_type = GLOBALS.HWTYPE
 epc.disk_image = GLOBALS.SRSLTE_IMG
 iface1 = epc.addInterface("eth1")
-#iface1a = epc.addInterface("eth2")
-iface1a = epc.addInterface("eth3")
+iface1a = epc.addInterface("eth2")
 iface1.addAddress(rspec.IPv4Address("10.10.1.1", "255.255.255.0"))
-#iface1a.addAddress(rspec.IPv4Address("172.168.1.1", "255.255.255.0"))
-iface1a.addAddress(rspec.IPv4Address("12.12.1.1", "255.255.255.0"))
+iface1a.addAddress(rspec.IPv4Address("172.168.1.1", "255.255.255.0"))
+
 
 # Add eNB1 node
 enb1 = request.RawPC("enb1")
