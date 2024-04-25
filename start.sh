@@ -6,9 +6,9 @@ NODE_ID=$(geni-get client_id)
 
 if [ $NODE_ID = "rue1" ]; then
     /local/repository/start-ue1.sh
-if [ $NODE_ID = "rue2" ]; then
+elif [ $NODE_ID = "rue2" ]; then
     /local/repository/start-ue2.sh
-if [ $NODE_ID = "rue3" ]; then
+elif [ $NODE_ID = "rue3" ]; then
     /local/repository/start-ue3.sh
 elif [ $NODE_ID = "enb1" ]; then
     /local/repository/start-enb1.sh
